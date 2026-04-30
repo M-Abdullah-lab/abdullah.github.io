@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M. Abdullah | Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent: #10b981; /* Hacker green */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 50px;
+            background-color: rgba(15, 23, 42, 0.9);
+            border-bottom: 1px solid #1e293b;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header span {
+            color: var(--accent);
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+
+        section {
+            padding: 60px 50px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #1e293b;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card h3 {
+            margin-bottom: 5px;
+            color: var(--text-main);
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        /* Skill Bars (Main and In-Card variants) */
+        .skills-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Make the bars inside cards a bit tighter */
+        .card .skills-container {
+            gap: 15px;
+            margin-top: auto; /* Pushes bars to the bottom if text varies */
+        }
+
+        .skill {
+            width: 100%;
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        .card .skill-info {
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
+
+        .skill-level {
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        .card .skill-level {
+            font-size: 0.8rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            background-color: #0f172a; /* Darker background for card bars */
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        #about .progress-bar {
+            background-color: #1e293b;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--accent);
+            border-radius: 6px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #1e293b;
+            margin-top: 40px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><strong>MA</strong></div>
+        <div class="links">
+            <a href="#about">About</a>
+            <a href="#labs">Labs & CTFs</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header>
+        <img src="edited-image.png" alt="M. Abdullah" class="profile-pic">
+        
+        <h1>M. <span>Abdullah</span></h1>
+        <p>Software & Cybersecurity Engineer</p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Currently navigating my 4th semester in Software Engineering with a strong focus on web security and bug bounty hunting. Whether I'm configuring my Linux environment or building automation scripts, I'm driven by the mechanics of how systems work—and how to secure them.</p>
+        <br>
+        <h3>Core Stack & Proficiency</h3>
+
+        <div class="skills-container">
+            <div class="skill">
+                <div class="skill-info">
+                    <span>Linux / Command Line</span>
+                    <span class="skill-level">Advanced (85%)</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-info">
+                    <span>Web Security (SQLi, XSS)</span>
+                    <span class="skill-level">Intermediate (65%)</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 65%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-info">
+                    <span>Python Regex</span>
+                    <span class="skill-level">Intermediate (50%)</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 50%;"></div>
+                </div>
+            </div>
+
+
+
+            <div class="skill">
+                <div class="skill-info">
+                    <span>Capture The Flag (CTF)</span>
+                    <span class="skill-level">Intermediate (65%)</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 65%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-info">
+                    <span>Database Management</span>
+                    <span class="skill-level">Beginner (20%)</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 20%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW LABS SECTION -->
+    <section id="labs">
+        <h2>Solved Labs & CTFs</h2>
+        <div class="grid">
+            
+            <!-- picoCTF Card -->
+            <div class="card">
+                <h3>picoCTF</h3>
+                <p>Practicing exploitation, reverse engineering, and foundational skills.</p>
+                <div class="skills-container">
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>General Skills</span>
+                            <span class="skill-level">100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>Web Exploitation</span>
+                            <span class="skill-level">20%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 20%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OverTheWire Card -->
+            <div class="card">
+                <h3>OverTheWire</h3>
+                <p>Mastering Linux command-line operations and system security.</p>
+                <div class="skills-container">
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>Bandit Wargame</span>
+                            <span class="skill-level">100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>Natas (Web Security)</span>
+                            <span class="skill-level">10%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 10%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PortSwigger Card -->
+            <div class="card">
+                <h3>PortSwigger Academy</h3>
+                <p>Hands-on application of modern web vulnerabilities.</p>
+                <div class="skills-container">
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>SQL Injection</span>
+                            <span class="skill-level">65%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>Cross-Site Scripting (XSS)</span>
+                            <span class="skill-level">15%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 15%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Based in Faisalabad, Pakistan.</p>
+        <p>Let's connect: <a href="mailto:your.email@example.com" style="color: var(--accent);">your.email@example.com</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 M. Abdullah. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
